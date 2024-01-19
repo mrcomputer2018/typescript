@@ -71,7 +71,27 @@ const author: Author & User = {
 
 // Interfaces
 interface IUser {
-    firstNanme: string;
+    // readonly - definindo para somente leitura
+    readonly firstNanme: string;
     email: string;
 }
 
+const emailUser: IUser = {
+    firstNanme: "Felipe",
+    email: "felipe@felipe.com";
+}
+
+// Union of Interfaces
+interface IAuthor {
+    books: string[];
+}
+
+const newAuthor: IAuthor & IUser = {
+    firstNanme: "João",
+    email: "joao@joao.com",
+    books: ["Senhor dos Aneis"],
+}
+
+//! So funciona em types
+type Grade = number | string;
+const grade: Grade = 10;
