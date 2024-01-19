@@ -12,7 +12,10 @@ type User = {
     password?: string;
     apples: string[];
     orders: Order[];
+    // função que retorna uma string
+    register(): string; 
 };
+    
 
 const user: User = {
     firstName: "João",
@@ -31,6 +34,9 @@ const user: User = {
             price: 150,
         },
     ],
+    register() {
+        return "Registered";
+    },
 };
 
  // ? parametro de função opcional
@@ -65,7 +71,9 @@ const author: Author & User = {
             price: 200,
         },
     ],
-
+    register() {
+        return "Registered";
+    },
 }
 
 
@@ -74,11 +82,15 @@ interface IUser {
     // readonly - definindo para somente leitura
     readonly firstNanme: string;
     email: string;
+    login(): string;
 }
 
 const emailUser: IUser = {
     firstNanme: "Felipe",
-    email: "felipe@felipe.com"
+    email: "felipe@felipe.com",
+    login() {
+        return "Logged";
+    }
 }
 
 // Union of Interfaces
@@ -90,6 +102,9 @@ const newAuthor: IAuthor & IUser = {
     firstNanme: "João",
     email: "joao@joao.com",
     books: ["Senhor dos Aneis"],
+    login() {
+        return "Logged";
+    }
 }
 
 //! So funciona em types
