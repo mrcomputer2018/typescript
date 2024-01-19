@@ -1,8 +1,20 @@
-const sum = (x: number, y: number) => x + y;
+// Quais valores pode receber e quais valores pode retornar
+interface IMathFunc {
+    (x: number, y: number): number;
+}
+
+const sum: IMathFunc = (x: number, y: number) => x + y;
 
 const value = sum(2, 2);
 
 console.log(value);
+
+
+const subtrair: IMathFunc = (x: number, y: number) => x - y;
+
+const valueSub = subtrair(2, 2);
+
+console.log(valueSub);
 
 
 const sum2 = (x: number, y: number): string => {
@@ -24,4 +36,7 @@ const log = (message: string): void => {
 
 log("Hello world!!!");
 sum3(24, 2);
+
+
+
 
