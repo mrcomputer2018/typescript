@@ -43,6 +43,8 @@ class PersonRefact {
     } 
 }
 
+const personThree = new PersonRefact(1, "João", 27);
+
 
 // Subclasses - Herança
 class Employee extends Person {
