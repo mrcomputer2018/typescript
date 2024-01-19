@@ -78,7 +78,7 @@ interface IUser {
 
 const emailUser: IUser = {
     firstNanme: "Felipe",
-    email: "felipe@felipe.com";
+    email: "felipe@felipe.com"
 }
 
 // Union of Interfaces
