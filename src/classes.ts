@@ -26,6 +26,23 @@ class Person implements IPerson{
 
 const personTwo = new Person(1, "João", 27);
 
+// Um jeito melhor de criar clsses
+class PersonRefact {
+    constructor(
+        readonly id: number,
+        protected name: string,
+        private age: number
+    ) {}
+
+    sayMyName(): string {
+        return (`My name is ${this.name}`);
+    }
+
+    sayMyAge(): string {
+        return (`I am ${this.age} years old`);
+    } 
+}
+
 
 // Subclasses - Herança
 class Employee extends Person {
