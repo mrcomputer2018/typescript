@@ -9,7 +9,7 @@ type User = {
     age: number;
     occupation: string;
     email: string;
-    passowrd: string;
+    passowrd?: string;
     apples: string[];
     orders: Order[];
 };
